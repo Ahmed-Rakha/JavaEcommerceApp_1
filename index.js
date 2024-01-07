@@ -21,6 +21,9 @@ const mainPic2 = document.querySelector('.main-pic2 img');
 const [rightArrow, leftArrow] = document.querySelectorAll(
   '.main-pic2 iconify-icon'
 );
+const [rightArrow2, leftArrow2] = document.querySelectorAll(
+  '.main-pic iconify-icon'
+);
 const overlay = document.querySelector('.overlay');
 const prueba = document.querySelector('.prueba');
 const close = document.querySelector('.close-icon');
@@ -115,18 +118,37 @@ for (let i = 0; i < imagesSource.length; i++) {
     mainPic2.src = imagesSource[i];
   });
 }
-rightArrow.onclick = function () {
+
+function setRightArrowSlider() {
   if (count > 7) {
     count = 0;
   }
+}
+function setLeftArrowSlider() {
+  if (count < 0) {
+    count = 7;
+  }
+}
+rightArrow.onclick = function () {
+  setRightArrowSlider();
   mainPic2.src = imagesSource[count];
   count++;
 };
 
 leftArrow.onclick = function () {
-  if (count < 0) {
-    count = 7;
-  }
+  setLeftArrowSlider();
   mainPic2.src = imagesSource[count];
+  count--;
+};
+
+rightArrow2.onclick = function () {
+  setRightArrowSlider();
+  mainPic.src = imagesSource[count];
+  count++;
+};
+
+leftArrow2.onclick = function () {
+  setLeftArrowSlider();
+  mainPic.src = imagesSource[count];
   count--;
 };

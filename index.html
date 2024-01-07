@@ -11,8 +11,9 @@
   <body>
     <div class="main-container">
       <nav>
+        <img src="images/icon-menu.svg" alt="" class="menue-icon" />
         <h1 class="logo">sneakers</h1>
-        <ul>
+        <ul class="list-items">
           <li>Collections</li>
           <li>Men</li>
           <li>Women</li>
@@ -53,9 +54,11 @@
       <aside>
         <div class="left-side">
           <div class="main-pic">
+            <iconify-icon icon="material-symbols:arrow-right"></iconify-icon>
+            <iconify-icon icon="material-symbols:arrow-left"></iconify-icon>
             <img src="images/image-product-1.jpg" alt="product-pic" />
           </div>
-          <div class="single-pic">
+          <div class="single-pic" id="custom-query">
             <span class="selected-pic-border">
               <img
                 class="selected-pic"
@@ -84,8 +87,8 @@
           </div>
         </div>
         <div class="right-side">
-          <h6>Sneaker Company</h6>
-          <h2>Fall Limited Edition Sneakers</h2>
+          <h6 class="company-name">Sneaker Company</h6>
+          <h2 class="main-title">Fall Limited Edition Sneakers</h2>
           <p class="description">
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they’ll withstand everything
@@ -94,8 +97,8 @@
           <div class="especial-price">
             <span>$125.00 </span>
             <span class="discount">50%</span>
+            <h6 class="main-price">$250.00</h6>
           </div>
-          <h6 class="main-price">$250.00</h6>
           <div class="btn-container">
             <p class="alert">your must select one piece at least !</p>
             <div class="counter-container">
@@ -106,7 +109,7 @@
                 icon="mingcute:plus-fill"
               ></iconify-icon>
             </div>
-            <div>
+            <div class="single-btn-container">
               <button class="add-btn-cart">
                 <iconify-icon icon="mdi-light:cart"></iconify-icon>
                 Add to cart
